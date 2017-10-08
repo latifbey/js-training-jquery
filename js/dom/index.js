@@ -99,4 +99,7 @@ describe('Test Suite - Let\'s use jquery', () => {
 
     });
     
+    it('should add an mouse over event only the highest two products which logs in console the price', () =>{
+
+    });
 });
