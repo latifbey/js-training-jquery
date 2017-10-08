@@ -62,6 +62,8 @@ describe('Test Suite - Let\'s use jquery', () => {
 
     });
     
-    
+    it('should bring back the initial image again, instead of "http://bit.ly/2xq8ev0"', () =>{
+
+    });
 });
 
