@@ -1,11 +1,9 @@
 function describe(){}
-function it(){}
+function it(fn){
+    return fn();
+}
 
 
-
-
-
-describe('Test Suite - Let\'s use jquery', () => {
     
     it('should hide all the images from the view', () =>{
 
@@ -102,4 +100,4 @@ describe('Test Suite - Let\'s use jquery', () => {
     it('should add an mouse over event only the highest two products which logs in console the price', () =>{
 
     });
-});
+
