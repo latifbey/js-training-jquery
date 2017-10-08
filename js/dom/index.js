@@ -1,3 +1,8 @@
+function describe(){}
+function it(){}
+
+
+
 
 
 describe('Test Suite - Let\'s use jquery', () => {

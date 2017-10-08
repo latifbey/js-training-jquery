@@ -7,5 +7,3 @@
 
 // Please us test.js for this assignment
 
-function describe(){}
-function it(){}
