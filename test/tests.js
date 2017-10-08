@@ -50,6 +50,10 @@ describe('Test Suite - Let\'s use jquery', () => {
 
     });
     
+    it('should color the stars of the third product with green', () =>{
+
+    });
+    
     it('should reset the last two images to the url "http://bit.ly/2xq8ev0"', () =>{
 
     });
@@ -63,6 +67,22 @@ describe('Test Suite - Let\'s use jquery', () => {
     });
     
     it('should bring back the initial image again, instead of "http://bit.ly/2xq8ev0"', () =>{
+
+    });
+    
+    it('should change every product desctiption to any text with at least 50 charakters', () =>{
+
+    });
+    
+    it('should randomly change all of the prices', () =>{
+
+    });
+    
+    it('should mark the background with the color yellow of the two cheapest products', () =>{
+
+    });
+    
+    it('should sort all the products ascendantly based on the the new prices', () =>{
 
     });
 });
