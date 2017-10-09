@@ -81,10 +81,10 @@ describe("Test Suite jQuery", ()=>{
         }));
     });
 
-    //it('should remove the panths from the katalog', () => {
-    //     removeThePanthsFromTheKatalog();
-    //     
-    //});
+    it('should remove the panths from the katalog', () => {
+        removeThePanthsFromTheKatalog();
+        $('.thumbnail').size().should.be.equal(6);
+    });
 
     it('should rename the product shirt to "Fish-Shirt"', () => {
         renameTheProductShirtToFishShirt();
