@@ -81,36 +81,36 @@ describe("Test Suite jQuery", ()=>{
         }));
     });
 
-    it('should remove the panths from the katalog', () => {
+    it('09) should remove the panths from the katalog', () => {
         removeThePanthsFromTheKatalog();
         $('.thumbnail').size().should.be.equal(6);
     });
 
-    it('should rename the product shirt to "Fish-Shirt"', () => {
+    it('10) should rename the product shirt to "Fish-Shirt"', () => {
         renameTheProductShirtToFishShirt();
         let firstShirtText = $("#firstProduct").find("h4").text();
         firstShirtText.should.equal("Fish-Shirt");
     });
 
-    it('should rename the first rock item to "Bird-Rock"', () => {
+    it('11) should rename the first rock item to "Bird-Rock"', () => {
         renameTheFirstRockItemToBirdRock();
         let firstShirtText = $("#secondProduct").find("h4").text();
         firstShirtText.should.equal("Bird-Rock");
     });
 
-    it('should add 5 stars to the product shirt', () => {
+    it('12) should add 5 stars to the product shirt', () => {
         addFiveStarsToTheProductShirt();
         let firstShirtLastStar = $("#firstProduct").find(".ratings").children("span:last-child");
         firstShirtLastStar.attr("class").should.equal("glyphicon glyphicon-star");
     });
 
-    it('should change the title name with a random name (use alg. for randomly generating chars)', () => {
+    it('13) should change the title name with a random name (use alg. for randomly generating chars)', () => {
         changeTheTitleNameWithARandomName();
         let title = $(".container").children().first().text();
         title.should.not.equal("NEW COLLECTION");
     });
 
-    it('should color the stars of the third product with green', () => {
+    it('14) should color the stars of the third product with green', () => {
         colorTheStarsOfTheThirdProductWithGreen();
         let thirdProductStars = $("#secondProduct").next().find(".ratings").children();
         let starColors = thirdProductStars.map((index, tag)=>{
@@ -122,7 +122,7 @@ describe("Test Suite jQuery", ()=>{
         starColors.has("rgb(0, 128, 0)").should.eql(true);
     });
 
-    it('should reset the last two images to the url "http://bit.ly/2xq8ev0"', () => {
+    it('15) should reset the last two images to the url "http://bit.ly/2xq8ev0"', () => {
         resetLastTwoImagesToUrl();
         let items = $(".container").children("div").children("div");
         let urlLastImage = $(items[items.length-1]).find("img").attr("src");
@@ -131,7 +131,7 @@ describe("Test Suite jQuery", ()=>{
         urlSecondLastImage.should.equal("http://bit.ly/2xq8ev0");
     });
 
-    it('should constantly change the price (#changingPrice), increment it by one in each 3 secs.', (done) => {
+    it('16) should constantly change the price (#changingPrice), increment it by one in each 3 secs.', (done) => {
         constantlyChangeThePriceAndIncrementItByOneInEachThreeSeconds();
         
         changingPrices.push($("#changingPrice").text());
@@ -144,7 +144,7 @@ describe("Test Suite jQuery", ()=>{
         }, 5000);
     });
 
-    it('should show the "BUY ITEM" again with a green background, gray border and a thin shadow', () => {
+    it('17) should show the "BUY ITEM" again with a green background, gray border and a thin shadow', () => {
         showTheBuyItemAgainWithAGreenBackgroundGrayBorderAndThinShadow();
         let removeBuyItemButtonQuery = $("button[class='btn btn-info right']");
         let mapOfGrayBorders = removeBuyItemButtonQuery.map((index, tag)=>{
@@ -166,7 +166,7 @@ describe("Test Suite jQuery", ()=>{
         mapOfShadows.entries().next().value[0].should.not.be.eql("none");
     });
 
-    it('should add an event handler to the "BUY ITEM" buttons and after a click it should show an alert', () => {
+    it('18) should add an event handler to the "BUY ITEM" buttons and after a click it should show an alert', () => {
         addAnEventHandlerToTheBuyItemButtonsAndAfterClickShowAlert();
         let removeBuyItemButtonQuery = $("button[class='btn btn-info right']");
 
@@ -180,7 +180,7 @@ describe("Test Suite jQuery", ()=>{
         clickEvents.length.should.equal(removeBuyItemButtonQuery.length);
     });
 
-    it('should bring back the initial image again, instead of "http://bit.ly/2xq8ev0"', () => {
+    it('19) should bring back the initial image again, instead of "http://bit.ly/2xq8ev0"', () => {
         bringBackTheInitialImageAgainInsteadOfUrl();
         let items = $(".container").children("div").children("div");
         let urlLastImage = $(items[items.length-1]).find("img").attr("src");
@@ -189,7 +189,7 @@ describe("Test Suite jQuery", ()=>{
         urlSecondLastImage.should.equal("https://s12.postimg.org/dawwajl0d/item_3_180x200.png");
     });
 
-    it('should change every product desctiption to any text with at least 50 charakters', () => {
+    it('20) should change every product desctiption to any text with at least 50 charakters', () => {
         changeEveryProductDescriptionToAnyTextWithAtLeast50Characters();
         let descriptions = $(".thumbnail").find(" > p");
         let newDescriptions = descriptions.map((index, tag)=>{
@@ -202,7 +202,7 @@ describe("Test Suite jQuery", ()=>{
         filteredNewDescriptions.length.should.equal(descriptions.length);
     });
 
-    it('should randomly change all of the prices', () => {
+    it('21) should randomly change all of the prices', () => {
         randomlyChangeAllOfThePrices();
         let prices = $('.price');
         let changedPrices = prices.map((index,tag)=>{
@@ -214,7 +214,7 @@ describe("Test Suite jQuery", ()=>{
         filteredChangedPrices.length.should.equal(prices.length);
     });
 
-    it('should mark the background with the color yellow of the two cheapest products', () => {
+    it('22) should mark the background with the color yellow of the two cheapest products', () => {
         markTheBackgroundWithTheColorYellowOfTheTwoCheapestProducts();
         let prices = $('.price');
         let valuePrices = prices.map((index, tag)=>{
@@ -227,7 +227,7 @@ describe("Test Suite jQuery", ()=>{
         secondLowPrice.css("background-color").should.equal("rgba(255, 255, 0, 0)");
     });
 
-    it('should sort all the products ascendantly based on the the new prices', () => {
+    it('23) should sort all the products ascendantly based on the the new prices', () => {
         sortAllOfTheProductsAscendantlyBasedOnTheNewPrices();
         let prices = $('.price');
         let valuePrices = prices.map((index, tag)=>{
@@ -242,7 +242,7 @@ describe("Test Suite jQuery", ()=>{
         properlySorted.should.be.eql(true);
     });
 
-    it('should add an mouse over event only the highest two products which logs in console the price (place on div)', () => {
+    it('24) should add an mouse over event only the highest two products which logs in console the price (place on div)', () => {
         addAnMouseOverEventOnlyTheHighestTwoProductsWhichLogsInConsoleThePrice();
         let prices = $('.price');
         let valuePrices = prices.map((index, tag)=>{
