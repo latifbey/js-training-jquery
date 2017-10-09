@@ -7,25 +7,25 @@ function pause(milliseconds) {
 //Testler birbiriyle alakalidir, isole degildir! Bu dosyada hicbisey degistirmenize gerek yok.
 describe("Test Suite jQuery", ()=>{
 
-    it('should hide all the images from the view', () => {
+    it('01) should hide all the images from the view', () => {
        hideAllImages();
        let imgCount = $("img").length;
        imgCount.should.equal(0);
     });
 
-    it('should show all the images again', () => {
+    it('02) should show all the images again', () => {
         showAllImages();
         let imgCount = $("img").length;
         imgCount.should.equal(8);
     });
 
-    it('should change the heading to "The Best Collection"', () => {
+    it('03) should change the heading to "The Best Collection"', () => {
         changeHeadingToTheBestCollection();
         let headingNew = $(".container").children().first().text();
         headingNew.should.equal("The Best Collection");
     });
 
-    it('should make the hr (.line) element bolder', () => {
+    it('04) should make the hr (.line) element bolder', () => {
         let hrLine = $("hr.line");
         let boldnessHrLineBefore = hrLine.first().css("border-width");
         makeHrLineElementBolder();
@@ -33,7 +33,7 @@ describe("Test Suite jQuery", ()=>{
         boldnessHrLineAfter.should.be.above(boldnessHrLineBefore);
     });
 
-    it('should change the background of each product title with a different color', () => {
+    it('05) should change the background of each product title with a different color', () => {
         changeBackgroundColorOfEachProductTitleWithDifferentColor();
         let productTitles = $("span.thumbnail").find("h4");
         let mappedColors = productTitles.map((index, tag)=>{
@@ -50,13 +50,13 @@ describe("Test Suite jQuery", ()=>{
         mapOfColors.size.should.equal(productTitles.length);
     });
 
-    it('should remove the "BUY ITEM" buttons', () => {
+    it('06) should remove the "BUY ITEM" buttons', () => {
         removeBuyItemButtons();
         let removeBuyItemButtonQuery = $("button[class='btn btn-info right']");
         removeBuyItemButtonQuery.length.should.equal(0);
     });
 
-    it('should remove the last three item from the view', () => {
+    it('07) should remove the last three item from the view', () => {
         removeLastThreeItemsFromView();
         let items = $(".container").children("div").children("div");
         let lastItem = items[7];
@@ -66,7 +66,7 @@ describe("Test Suite jQuery", ()=>{
         should.not.exist(secondLastItem);
     });
 
-    it('should make 10% reduction on all products', () => {
+    it('08) should make 10% reduction on all products', () => {
         let prices = $('.price');
         let pricesBefore = prices.map((index, tag)=>{
             return $(tag).text();
@@ -81,10 +81,10 @@ describe("Test Suite jQuery", ()=>{
         }));
     });
 
-    // it('should remove the pahts from the katalog', () => {
-    //     removeThePathsFromTheKatalog();
-    //     //What paths?
-    // });
+    //it('should remove the panths from the katalog', () => {
+    //     removeThePanthsFromTheKatalog();
+    //     
+    //});
 
     it('should rename the product shirt to "Fish-Shirt"', () => {
         renameTheProductShirtToFishShirt();
@@ -131,14 +131,17 @@ describe("Test Suite jQuery", ()=>{
         urlSecondLastImage.should.equal("http://bit.ly/2xq8ev0");
     });
 
-    it('should constantly change the price (#changingPrice), increment it by one in each 3 secs.', () => {
+    it('should constantly change the price (#changingPrice), increment it by one in each 3 secs.', (done) => {
         constantlyChangeThePriceAndIncrementItByOneInEachThreeSeconds();
+        
+        changingPrices.push($("#changingPrice").text());
+        
         let changingPrices = [];
-        for(let i = 0; i < 2; i++){
+        setTimeout(function(){
             changingPrices.push($("#changingPrice").text());
-            pause(3000);
-        }
-        changingPrices[0].should.not.be.eql(changingPrices[1]);
+            changingPrices[0].should.not.be.eql(changingPrices[1]);
+            done();
+        }, 5000);
     });
 
     it('should show the "BUY ITEM" again with a green background, gray border and a thin shadow', () => {
