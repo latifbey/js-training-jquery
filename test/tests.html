@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IT Club Oberland - JS Training</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="../js/lib/normalize/normalize.css">
+    <link rel="stylesheet" href="lib/mocha.min.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../js/dom/index.js"></script>
+    <script src="lib/should.min.js"></script>
+    <script src="lib/mocha.min.js"></script>
+</head>
+
+<body>
+<div class="container" style="display:none">
+    <h4>NEW COLLECTION</h4>
+    <div class="row">
+        <div class="col-md-3 col-sm-6" id="firstProduct">
+                <span class="thumbnail">
+                    <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">$29,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+        <div class="col-md-3 col-sm-6" id="secondProduct">
+                <span class="thumbnail">
+                    <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">$29,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                    <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">$29,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                    <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">$30,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+                <span class="thumbnail" id="specialProduct">
+                    <img src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price" id="changingPrice">$31,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+        <div class="col-md-3 col-sm-6">
+                <span class="thumbnail">
+                    <img src="https://s12.postimg.org/655583bx9/item_1_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">$29,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+        <div class="col-md-3 col-sm-6" data-who="theSecondLastProduct">
+                <span class="thumbnail">
+                    <img src="https://s12.postimg.org/5w7ki5z4t/item_4_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">$29,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+        <div class="col-md-3 col-sm-6" data-who="theLastProduct">
+                <span class="thumbnail">
+                    <img src="https://s12.postimg.org/dawwajl0d/item_3_180x200.png" alt="...">
+                    <h4>Product Tittle</h4>
+                    <div class="ratings">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="price">$29,90</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" >	<button class="btn btn-info right" > BUY ITEM</button></a>
+                        </div>
+
+                    </div>
+                </span>
+        </div>
+    </div>
+</div>
+    <h3>Tests</h3>
+    
+    <div id="mocha"></div>
+
+    <script>
+        mocha.setup('bdd')
+    </script>
+    <script src="tests.js"></script>
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
+</body>
+
+</html>
