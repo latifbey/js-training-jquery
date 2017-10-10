@@ -34,10 +34,7 @@ function removeLastThreeItemsFromView() {
 function makeTenPercentPriceReductionOnAllProducts() {
 
 }
-//'should remove the pahts from the katalog'
-// function removeThePathsFromTheKatalog() {
-//
-// }
+
 //'should rename the product shirt to "Fish-Shirt"'
 function renameTheProductShirtToFishShirt() {
 
@@ -52,6 +49,7 @@ function addFiveStarsToTheProductShirt() {
 }
 //'should change the title name with a random name (use alg. for randomly generating chars)'
 function changeTheTitleNameWithARandomName() {
+
 }
 //'should color the stars of the third product with green'
 function colorTheStarsOfTheThirdProductWithGreen() {
@@ -79,11 +77,9 @@ function bringBackTheInitialImageAgainInsteadOfUrl() {
 }
 // 'should change every product desctiption to any text with at least 50 charakters'
 function changeEveryProductDescriptionToAnyTextWithAtLeast50Characters() {
-
 }
 //'should randomly change all of the prices'
 function randomlyChangeAllOfThePrices() {
-
 }
 //'should mark the background with the color yellow of the two cheapest products'
 function markTheBackgroundWithTheColorYellowOfTheTwoCheapestProducts() {
@@ -93,7 +89,11 @@ function markTheBackgroundWithTheColorYellowOfTheTwoCheapestProducts() {
 function sortAllOfTheProductsAscendantlyBasedOnTheNewPrices() {
 
 }
-//'should add an mouse over event only the highest two products which logs in console the price'
+//'should add an mouse over event only the highest two products which logs in console the price (place on wrapping div)'
 function addAnMouseOverEventOnlyTheHighestTwoProductsWhichLogsInConsoleThePrice() {
+
+}
+//'should add three new products to the list like the existing one'
+function addThreeNewProductsToTheEndOfTheProductList() {
 
 }

@@ -150,7 +150,7 @@ describe("Test Suite jQuery", function () {
         urlSecondLastImage.should.equal("http://bit.ly/2xq8ev0");
     });
 
-    it('16) should constantly change the price (#changingPrice), increment it by one in each 3 secs.', (done) => {
+    it('16) should constantly change the price (#changingPrice), increment it by one in each 3 secs.', () => {
         constantlyChangeThePriceAndIncrementItByOneInEachThreeSeconds();
 
         let changingPrices = [];
@@ -290,7 +290,7 @@ describe("Test Suite jQuery", function () {
         && typeof secondHighestPriceEvents["mouseover"] !== "undefined").should.be.eql(true);
     });
 
-    it('should add three new products to the list like the existing one', ()=>{
+    it('25) should add three new products to the list like the existing one', ()=>{
         addThreeNewProductsToTheEndOfTheProductList();
         let containers = $(".thumbnail").parent();
         containers.length.should.equal(8);
