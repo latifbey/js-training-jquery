@@ -11,7 +11,7 @@ function delay(milliseconds) {
 //TODO: For Instructors only -> Simplify jQuery statements
 
 //Testler birbiriyle alakalidir, isole degildir! Bu dosyada hicbisey degistirmenize gerek yok.
-describe("Test Suite jQuery", function () {
+describe("Test Suite jQuery => Each Test depends on the one above! Don't be fooled by passing greens in the beginning.", function () {
 
     this.timeout(20000);
 
